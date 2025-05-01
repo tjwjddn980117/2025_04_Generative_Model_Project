@@ -1,0 +1,47 @@
+name: DiffuseMix
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  # Python
+  - python=3.9
+  - pip
+
+  # 수치 계산 & 과학 패키지
+  - numpy
+  - scipy
+  - matplotlib
+  - scikit-learn
+
+  # PyTorch & Diffusion
+  - pytorch
+  - torchvision
+  - cudatoolkit=11.8     # GPU 환경 없으면 삭제 가능
+
+  # Jupyter 환경
+  - jupyterlab
+  - ipykernel
+
+  # HTTP / Async
+  - aiohttp
+  - yarl
+  - multidict
+
+  # 기타 유틸리티
+  - pyyaml
+  - tqdm
+  - pillow
+  - pandas
+
+  # pip로 설치할 패키지들
+  - pip:
+    - diffusers
+    - transformers
+    - accelerate
+    - ftfy
+    - safetensors
+    - einops
+    - kornia
+    - wandb
+    - opencv-python
